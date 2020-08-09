@@ -8,6 +8,12 @@ echo "---> Enabling s2i support in httpd24 image"
 
 config_s2i
 
+##### CUSTOM START
+
+cp -Rf /tmp/src/*.html ./
+
+##### CUSTOM END
+
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
   if [ "$(ls -A ./httpd-cfg/*.conf)" ]; then
